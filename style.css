@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", "sans-serif";
+}
+
+body {
+    background: rgb(63, 62, 62);
+}
+
+.form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 480px;
+    height: 370px;
+    background: whitesmoke;
+    background-image: linear-gradient(to bottom right, #a8dbfa, #d3f5cf, #a8dbfa, #635ee2);
+}
+
+.form .head {
+    width: 100%;
+    height: 55px;
+    display: flex;
+}
+
+.form .head>div {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    font-size: 22px;
+    line-height: 55px;
+    cursor: pointer;
+    background: transparent;
+}
+
+.form .head>div:nth-child(2) {
+    background: whitesmoke;
+    transition: all .3s ease-in-out;
+}
+
+.form .body {
+    position: absolute;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.form .body>div {
+    position: absolute;
+    width: 55%;
+    height: 100%;
+    transition: all .3s ease-in-out;
+}
+
+.form .body .form-row {
+    border-top: 1px solid #ccc;
+    padding: 5% 0% 0% 5%;
+}
+
+.form .body .form-row input {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 95%;
+    height: 25px;
+    font-size: 18px;
+    text-indent: 5px;
+}
+
+.form .body .form-row>h5 {
+    cursor: default;
+}
+
+.inputs {
+    margin: 5px;
+    margin-top: 8px;
+    display: flex;
+    border-bottom: 2px solid black;
+    border-radius: 5%;
+    margin-bottom: 25px;
+}
+
+.inputs:hover {
+    border-bottom: 2px solid rgb(34, 182, 150);
+    transition: all .2s ease-in-out;
+}
+
+.inputs>svg {
+    margin: auto;
+}
+
+.form .body .form-row>a {
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    padding-left: 33%;
+}
+
+.form .body .form-row>a:hover {
+    color: #635ee2;
+    font-weight: 900;
+    font-size: 14px;
+}
+
+
+/*--------Button-------*/
+
+.Btn>button {
+    border: none;
+    background: #b5e3ee;
+    width: 98%;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 8%;
+    cursor: pointer;
+}
+
+.Btn>button:hover {
+    color: #2b2d3a;
+}
+
+.Btn {
+    position: absolute;
+    top: 60%;
+    left: 18%;
+    width: 75%;
+    padding: 2px;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom right, rgb(34, 182, 150), #635ee2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: box-shadow .3s;
+}
+
+.Btn:hover {
+    box-shadow: 0 0 15px rgba(24, 23, 23, 0.2);
+}
+
+
+/*-------------------*/
+
+.form .body>div.login {
+    left: 0%;
+}
+
+.form .body>div.singup {
+    left: 100%;
+}
+
+.form .body.active>div.login {
+    left: -100%;
+}
+
+.form .body.active>div.singup {
+    left: 0%;
+}
+
+
+/*-----------------*/
+
+particle {
+    position: fixed;
+    left: 0;
+    top: 0;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0;
+}
